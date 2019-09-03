@@ -26,6 +26,8 @@ version="4.5.0.alpha" useFeatures="true" includeLaunchers="true">
       <plugin id="org.wso2.carbon.pax-logging-log4j2-plugins" autoStart="true" startLevel="3" />
       <plugin id="org.eclipse.equinox.p2.reconciler.dropins" autoStart="true" startLevel="4" />
       <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
+      <plugin id="org.wso2.carbon.micro.integrator.initializer" autoStart="true" startLevel="5" />
+      <plugin id="org.wso2.micro.integrator.startup" autoStart="true" startLevel="6" />
 
       <!-- Disable update manager. It seems as if this could be achieved by the first line, but in
            fact the second line sets reconcile to false (see org.eclipse.equinox.p2.publisher.eclipse.ConfigCUsAction#publishBundleCUs) -->
@@ -33,6 +35,7 @@ version="4.5.0.alpha" useFeatures="true" includeLaunchers="true">
       <plugin id="org.eclipse.update.configurator" autoStart="true" startLevel="4"/>
 
       <property name="org.eclipse.equinox.simpleconfigurator.useReference" value="true" />
+      <property name="osgi.startLevel" value="10" />
    </configurations>
 
 </product>
